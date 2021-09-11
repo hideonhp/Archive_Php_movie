@@ -8,6 +8,12 @@ Bao gồm các công nghệ xịn xò như:
 
 * 9-9: Khởi tạo dự án
 
-## Credit To
+## Function
 
-* none
+* Validate Input:
+- Sanitation: Loại bỏ kí tự thừa (space) trong quá trình validate.
+- Kiểm tra tên đăng nhập, email đã có người đăng ký hay chưa (live check).
+- hash mật khẩu
+- Required: Yêu cầu không bỏ trống.
+
+đã đến 27
