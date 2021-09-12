@@ -31,20 +31,34 @@ class PreviewProvider {
 
                             <div class='buttons'>
                                 <button><i class='fas fa-play'></i>  Xem Ngay</button>
-                                <button onclick='volTog(this)'><i class='fas fa-volume-mute'></button>
+                                <button onclick='volTog(this)'><i class='fas fa-volume-mute'></i></button>
                             </div>
                         </div>
                     </div>
                 </div>";
     }
 
-    private function getRdEntity(){
-        $query = $this -> con->prepare("SELECT * FROM entities ORDER BY RAND() LIMIT 1");
-        $query-> execute();
+    public function createEntityPreviewSquare($entity){
+        $id = $entity -> getId();
+        $thumbnail = $entity->getThumbnail();
+        $name = $entity->getName();
 
-        $row = $query-> fetch(PDO::FETCH_ASSOC);
+        return "<a href='entity.php?id=$id'>
+                    <div class='preCon small'>
+                        <img src='$thumbnail' title='$name'>
+                    </div>
+                </a>";
+    }
+
+    private function getRdEntity(){
+        // $query = $this -> con->prepare("SELECT * FROM entities ORDER BY RAND() LIMIT 1");
+        // $query-> execute();
+
+        // $row = $query-> fetch(PDO::FETCH_ASSOC);
         
-        return new Entity($this->con, $row);
+        // return new Entity($this->con, $row);
+        $entity = EntityProvider::getEntities($this->con, null, 1);
+        return $entity[0];
     }
 
 }
