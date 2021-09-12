@@ -176,3 +176,15 @@ a {
       overflow-y: hidden;
       white-space: nowrap;
  }
+
+ .preCat{
+      padding: 0 50px;
+ }
+ .errBanner {
+      color: wheat;
+      position: absolute;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+ }
