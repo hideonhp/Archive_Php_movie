@@ -8,6 +8,10 @@ Bao gồm các công nghệ xịn xò như:
 
 * 9-9: Khởi tạo dự án
 
+## Bugs
+
+* biểu tượng âm thanh bị lỗi ở trang chủ ->  chưa sửa được
+
 ## Function
 
 * Validate Input:
