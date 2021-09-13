@@ -12,4 +12,7 @@ echo $preview->createPreviewVideo(null);
 
 $seasonProvider = new SeasonProvider($con, $userLoggedIn);
 echo $seasonProvider-> create ($entity);
+
+$CategoryContainers = new CategoryContainers($con, $userLoggedIn);
+echo $CategoryContainers-> showCategory ($entity->getCategoryId(),"Bạn có thể thích các bộ phim khác ?");
 ?>
