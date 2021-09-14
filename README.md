@@ -20,4 +20,4 @@ Bao gồm các công nghệ xịn xò như:
 - hash mật khẩu
 - Required: Yêu cầu không bỏ trống.
 
-đã đến 70
+đã đến 96

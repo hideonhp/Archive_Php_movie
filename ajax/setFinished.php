@@ -11,7 +11,7 @@ if(isset($_POST["videoId"])&& isset($_POST["username"])){
      $query->execute();
 
 }else{
-     echo "Lỗi hệ thống (mã:T-003)";
+     echo "Lỗi hệ thống (mã:T-002)";
 }
 
 ?>
