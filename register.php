@@ -44,40 +44,40 @@ function getInputValue($name) {
 
                 <div class="header">
                     <img src="assets/images/logo.png" title="Logo" alt="Site logo" />
-                    <h3>Sign Up</h3>
-                    <span>to continue to Reeceflix</span>
+                    <h3>Đăng Ký</h3>
+                    <span>để có thể đăng nhập vào hệ thống</span>
                 </div>
 
                 <form method="POST">
 
                     <?php echo $account->getError(Constants::$firstNameCharacters); ?>
-                    <input type="text" name="firstName" placeholder="First name" value="<?php getInputValue("firstName"); ?>" required>
+                    <input type="text" name="firstName" placeholder="Họ" value="<?php getInputValue("firstName"); ?>" required>
 
                     <?php echo $account->getError(Constants::$lastNameCharacters); ?>
-                    <input type="text" name="lastName" placeholder="Last name" value="<?php getInputValue("lastName"); ?>" required>
+                    <input type="text" name="lastName" placeholder="Tên" value="<?php getInputValue("lastName"); ?>" required>
                     
                     <?php echo $account->getError(Constants::$usernameCharacters); ?>
                     <?php echo $account->getError(Constants::$usernameTaken); ?>
-                    <input type="text" name="username" placeholder="Username" value="<?php getInputValue("username"); ?>" required>
+                    <input type="text" name="username" placeholder="Tên Tài Khoản" value="<?php getInputValue("username"); ?>" required>
 
                     <?php echo $account->getError(Constants::$emailsDontMatch); ?>
                     <?php echo $account->getError(Constants::$emailInvalid); ?>
                     <?php echo $account->getError(Constants::$emailTaken); ?>
                     <input type="email" name="email" placeholder="Email" value="<?php getInputValue("email"); ?>" required>
 
-                    <input type="email" name="email2" placeholder="Confirm email" value="<?php getInputValue("email2"); ?>" required>
+                    <input type="email" name="email2" placeholder="Xác Nhận email" value="<?php getInputValue("email2"); ?>" required>
                     
                     <?php echo $account->getError(Constants::$passwordsDontMatch); ?>
                     <?php echo $account->getError(Constants::$passwordLength); ?>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password" placeholder="Mật Khẩu" required>
 
-                    <input type="password" name="password2" placeholder="Confirm password" required>
+                    <input type="password" name="password2" placeholder="Xác Nhận Mật Khẩu" required>
 
-                    <input type="submit" name="submitButton" value="SUBMIT">
+                    <input type="submit" name="submitButton" value="Đăng Ký">
 
                 </form>
 
-                <a href="login.php" class="signInMessage">Already have an account? Sign in here!</a>
+                <a href="login.php" class="signInMessage">Đã có tài khoản rồi ư? Đăng Nhập ở đây nè!</a>
 
             </div>
 

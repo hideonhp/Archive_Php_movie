@@ -40,21 +40,21 @@ function getInputValue($name) {
 
                 <div class="header">
                     <img src="assets/images/logo.png" title="Logo" alt="Site logo" />
-                    <h3>Sign In</h3>
-                    <span>to continue to Reeceflix</span>
+                    <h3>Đăng Nhập</h3>
+                    <span>để có thể sử dụng hệ thống</span>
                 </div>
 
                 <form method="POST">
                     <?php echo $account->getError(Constants::$loginFailed); ?>
-                    <input type="text" name="username" placeholder="Username" value="<?php getInputValue("username"); ?>" required>
+                    <input type="text" name="username" placeholder="Tên Tài Khoản" value="<?php getInputValue("username"); ?>" required>
 
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password" placeholder="Mật Khẩu" required>
 
-                    <input type="submit" name="submitButton" value="SUBMIT">
+                    <input type="submit" name="submitButton" value="Đăng Nhập">
 
                 </form>
 
-                <a href="register.php" class="signInMessage">Need an account? Sign up here!</a>
+                <a href="register.php" class="signInMessage">Chưa có tài khoản? Đăng ký ở đây nè!</a>
 
             </div>
 

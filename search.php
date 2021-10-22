@@ -2,7 +2,7 @@
 include_once("includes/header.php");
 ?>
 <div class="textboxContainer">
-    <input type="text" class="searchInput" placeholder="Search for something">
+    <input type="text" class="searchInput" placeholder=" Tìm Kiếm Theo Tên ?">
 </div>
 
 <div class="results"></div>

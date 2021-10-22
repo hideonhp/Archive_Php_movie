@@ -65,7 +65,7 @@ class Video {
         $season = $this->getSeasonNumber();
         $episode = $this->getEpisodeNumber();
 
-        return "Season $season, Episode $episode";
+        return "Mùa $season, Tập $episode";
     }
 
     public function isMovie() {

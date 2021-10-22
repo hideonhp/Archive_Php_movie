@@ -25,7 +25,7 @@ class SeasonProvider {
 
 
             $seasonsHtml .= "<div class='season'>
-                                    <h3>Season $seasonNumber</h3>
+                                    <h3>Mùa $seasonNumber</h3>
                                     <div class='videos'>
                                         $videosHtml
                                     </div>
@@ -50,7 +50,7 @@ class SeasonProvider {
                             <img src='$thumbnail'>
 
                             <div class='videoInfo'>
-                                <h4>$episodeNumber. $name</h4>
+                                <h4> Tập $episodeNumber. $name</h4>
                                 <span>$description</span>
                             </div>
 

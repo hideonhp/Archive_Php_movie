@@ -59,7 +59,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
     $agreement = new \PayPal\Api\Agreement();
 
     $subscriptionMessage = "<div class='alertError'>
-                            Something went wrong!
+                            Đã xảy ra lỗi !!!
                         </div>";
   
     try {
@@ -71,7 +71,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
 
         if($result) {
             $subscriptionMessage = "<div class='alertSuccess'>
-                            You're all signed up!
+                            Bạn đã đăng ký thành công rồi !
                         </div>";
         }
 
@@ -86,7 +86,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
   } 
   else if (isset($_GET['success']) && $_GET['success'] == 'false') {
     $subscriptionMessage = "<div class='alertError'>
-                            User cancelled or something went wrong!
+                            Thanh toán chưa được xác thực!
                         </div>";
   }
 
@@ -98,7 +98,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
 
         <form method="POST">
 
-            <h2>User details</h2>
+            <h2>Thông Tin Cơ Bản</h2>
             
             <?php
 
@@ -107,15 +107,15 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
             $email = isset($_POST["email"]) ? $_POST["email"] : $user->getEmail();
             ?>
 
-            <input type="text" name="firstName" placeholder="First name" value="<?php echo $firstName; ?>">
-            <input type="text" name="lastName" placeholder="Last name" value="<?php echo $lastName; ?>">
+            <input type="text" name="firstName" placeholder="Họ" value="<?php echo $firstName; ?>">
+            <input type="text" name="lastName" placeholder="Tên" value="<?php echo $lastName; ?>">
             <input type="email" name="email" placeholder="Email" value="<?php echo $email; ?>">
 
             <div class="message">
                 <?php echo $detailsMessage; ?>
             </div>
             
-            <input type="submit" name="saveDetailsButton" value="Save">
+            <input type="submit" name="saveDetailsButton" value="Thay Đổi">
 
 
         </form>
@@ -126,17 +126,17 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
 
         <form method="POST">
 
-            <h2>Update password</h2>
+            <h2>Thay Đổi Mật Khẩu</h2>
 
-            <input type="password" name="oldPassword" placeholder="Old password">
-            <input type="password" name="newPassword" placeholder="New password">
-            <input type="password" name="newPassword2" placeholder="Confirm new password">
+            <input type="password" name="oldPassword" placeholder="Mật Khẩu cũ là ?">
+            <input type="password" name="newPassword" placeholder="Mật Khẩu Mới">
+            <input type="password" name="newPassword2" placeholder="Xác Nhận Mật Khẩu Mới">
 
             <div class="message">
                 <?php echo $passwordMessage; ?>
             </div>
 
-            <input type="submit" name="savePasswordButton" value="Save">
+            <input type="submit" name="savePasswordButton" value="Thay Đổi">
 
 
         </form>
@@ -144,7 +144,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
     </div>
 
     <div class="formSection">
-        <h2>Subscription</h2>
+        <h2>Thông Tin Đăng Ký !!!</h2>
 
         <div class="message">
             <?php echo $subscriptionMessage; ?>
@@ -153,10 +153,10 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
         <?php
 
         if($user->getIsSubscribed()) {
-            echo "<h3>You are subscribed! Go to PayPal to cancel.</h3>";
+            echo "<h3>Bạn đã đăng ký là thành viên vip. Hãy vào Paypal để hủy đăng ký.</h3>";
         }
         else {
-            echo "<a href='billing.php'>Subscribe to Reeceflix</a>";
+            echo "<a href='billing.php'>Đăng Ký Làm Thành Viên Vip !</a>";
         }
         ?>
     </div>

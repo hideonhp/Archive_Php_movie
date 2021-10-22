@@ -12,7 +12,7 @@ class PreviewProvider {
         $entitiesArray = EntityProvider::getEntities($this->con, $categoryId, 1);
 
         if(sizeof($entitiesArray) == 0) {
-            ErrorMessage::show("No TV shows to display");
+            ErrorMessage::show("Không có bộ phim nào để hiển thị !");
         }
 
         return $this->createPreviewVideo($entitiesArray[0]);
@@ -22,7 +22,7 @@ class PreviewProvider {
         $entitiesArray = EntityProvider::getTVShowEntities($this->con, null, 1);
 
         if(sizeof($entitiesArray) == 0) {
-            ErrorMessage::show("No TV shows to display");
+            ErrorMessage::show("Không có bộ phim nào để hiển thị !");
         }
 
         return $this->createPreviewVideo($entitiesArray[0]);
@@ -32,7 +32,7 @@ class PreviewProvider {
         $entitiesArray = EntityProvider::getMoviesEntities($this->con, null, 1);
 
         if(sizeof($entitiesArray) == 0) {
-            ErrorMessage::show("No movies to display");
+            ErrorMessage::show("Không có bộ phim nào để hiển thị !");
         }
 
         return $this->createPreviewVideo($entitiesArray[0]);
@@ -53,7 +53,7 @@ class PreviewProvider {
         $video = new Video($this->con, $videoId);
         
         $inProgress = $video->isInProgress($this->username);
-        $playButtonText = $inProgress ? "Continue watching" : "Play";
+        $playButtonText = $inProgress ? "Tiếp Tục Xem" : "Xem Ngay";
 
         $seasonEpisode = $video->getSeasonAndEpisode();
         $subHeading = $video->isMovie() ? "" : "<h4>$seasonEpisode</h4>";
